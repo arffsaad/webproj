@@ -14,7 +14,7 @@ $pwd = mysqli_real_escape_string($db,$_POST['pwd']);
 $sql = "SELECT * FROM sesstest WHERE username = '$usr'";
 $result = mysqli_query($db,$sql);
 if(mysqli_num_rows($result) == 0){
-    $_SESSION["wrongcred"] = true;
+    $_SESSION["msg"] = 1;
     header("location: login.php");
     exit;
 }
@@ -31,7 +31,7 @@ else{
         exit;
     }
     else{
-        $_SESSION["wrongcred"] = true;
+        $_SESSION["msg"] = 1;
         header("location: login.php");
         exit;
     }
@@ -42,4 +42,6 @@ mysqli_close($db);
 
 <html>
     <head><title>Redirecting...</title>
+    <link rel="icon" type="image/ico" href="favicon.ico">
+</head>
 </html>
