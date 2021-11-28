@@ -17,16 +17,16 @@ include_once "config.php";
 <head><title>Login - AD-DEFENSE</title>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="icon" type="image/ico" href="favicon.ico">
-<link href='https://fonts.googleapis.com/css?family=ZCOOL XiaoWei' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
 <style>
-    body{
-        font-family: 'ZCOOL XiaoWei'; 
+    .content{
+        font-family: 'Oswald', sans-serif;
     }
 </style>
 </head>
 
 <body>
-<div class="w3-top w3-bar w3-black" >
+<div class="w3-top w3-bar w3-black " >
     <a href="home.php" class="w3-bar-item w3-button">Home</a>
 <a href="about.php" class="w3-bar-item w3-button w3-left-align">About</a>
 <a href="register.php" class="w3-bar-item w3-button w3-left-align">Register</a>
