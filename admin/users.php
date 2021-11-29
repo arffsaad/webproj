@@ -13,7 +13,7 @@ include_once "../config.php";
 <!DOCTYPE HTML>
 <html>
 <head>
-
+<title>Admin Panel - AD-DEFENSE</title>
 
 </head>
 <body>

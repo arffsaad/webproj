@@ -30,7 +30,7 @@ else {
 </head>
 
 <body>
-<div class="w3-top w3-bar w3-black" ><a href="home.php" class="w3-bar-item w3-button">Home</a>
+<div class="w3-top w3-bar w3-black" ><a href="index.php" class="w3-bar-item w3-button">Home</a>
 <a href="about.php" class="w3-bar-item w3-button w3-left-align">About</a>
 <?php
 if ($logged == "NO"){

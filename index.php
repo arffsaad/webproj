@@ -37,7 +37,7 @@ else{
 </head>
 
 <body>
-<div class="w3-top w3-bar w3-black" ><a href="home.php" class="w3-bar-item w3-button">Home</a>
+<div class="w3-top w3-bar w3-black" ><a href="index.php" class="w3-bar-item w3-button">Home</a>
 <a href="about.php" class="w3-bar-item w3-button">About</a>
 <?php
 if ($logged == "NO"){
@@ -49,7 +49,11 @@ if($logged == "YES"){
     echo '<a href="dashboard.php" class="w3-bar-item w3-button w3-right">Dashboard</a>';
 }
 if(isset($_SESSION["admin"]) && $_SESSION["admin"] == true){
-    echo '<a href="admin.php" class="w3-bar-item w3-button w3-right"><b>Admin Panel</b></a>';
+    echo '<div class="w3-dropdown-hover w3-right">
+    <button class="w3-button"><b>Admin Panel</b></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+      <a href="admin/users.php" class="w3-bar-item w3-button">Manage Users</a>
+      </div>';
 }
 ?>
 </div>

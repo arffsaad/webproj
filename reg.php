@@ -17,6 +17,8 @@ else{
     $phash = password_hash($pwd, PASSWORD_DEFAULT);
     $sql = "INSERT INTO sesstest VALUES (DEFAULT, '$usr', '$phash', DEFAULT);";
     mysqli_query($db,$sql);
+    $sql = "INSERT INTO userdata VALUES (DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT);";
+    mysqli_query($db,$sql);
     $_SESSION["msg"] = 2;
     header("location: login.php");
     mysqli_close($db);

@@ -27,7 +27,7 @@ else{
         $_SESSION["loggedin"] = true;
         $_SESSION["activeuser"] = $usr;
         $_SESSION["admin"] = $adm;
-        header("location: home.php");
+        header("location: index.php");
         exit;
     }
     else{
