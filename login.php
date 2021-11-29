@@ -26,17 +26,19 @@ include_once "config.php";
 </head>
 
 <body>
-<div class="w3-top w3-bar w3-black " >
+<div class="w3-top w3-bar w3-black">
     <a href="home.php" class="w3-bar-item w3-button">Home</a>
 <a href="about.php" class="w3-bar-item w3-button w3-left-align">About</a>
 <a href="register.php" class="w3-bar-item w3-button w3-left-align">Register</a>
 <a href="login.php" class="w3-bar-item w3-button w3-left-align">Login</a>
 </div>
-    <h1>LOGIN PAGE</h1>
-    <div class="loginbox">
+    <div class="w3-container">
+        <img src="img/img02.jpg" width=100%>
+        <div class="w3-container w3-display-middle" style="background:#FFFFFF">
+        <h1>LOGIN</h1>
     <form method="post" action="auth.php" name="login">
-        Username <input type="text" name="usr" required><br>
-        Password <input type="password" name="pwd" required><br>
+        <span>Username</span><br><span><input type="text" name="usr" required></span><br>
+        <span>Password</span><br><span><input type="password" name="pwd" required></span><br>
         <?php
         if(isset($_SESSION["msg"])){
         if ($_SESSION["msg"] === 1){
@@ -48,8 +50,10 @@ include_once "config.php";
             session_unset();
         
         ?>
-    <input type="submit" value="Login">
+        <br>
+    <button type="submit" class="w3-button w3-teal">Login</button>
 </form>
+    </div>
         </div>
 </body>
 

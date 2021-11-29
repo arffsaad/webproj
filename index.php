@@ -20,15 +20,9 @@ else{
         body{
             background:#000000;
         }
-        .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 4;
-  color:#FFFFFF;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
+        .ontop{
+            z-index: 4;
+            color:#FFFFFF
 }
 .header{
     font-weight:bold;
@@ -54,13 +48,13 @@ if($logged == "YES"){
     echo '<a href="deauth.php" class="w3-bar-item w3-button w3-right">Logout</a>';
     echo '<a href="dashboard.php" class="w3-bar-item w3-button w3-right">Dashboard</a>';
 }
-if($_SESSION["admin"] == true){
+if(isset($_SESSION["admin"]) && $_SESSION["admin"] == true){
     echo '<a href="admin.php" class="w3-bar-item w3-button w3-right"><b>Admin Panel</b></a>';
 }
 ?>
 </div>
 <div class="w3-container">
-    <div class="centered w3-container "><p align="center"><span class="header">AD-DEFENSE WORKSHOP</span><br><span class="sub">Industry leading workshop for all Domain Admins, from a Domain Admin to another.</span></p></div>
+    <div class="w3-container w3-display-middle ontop"><p><span class="header">AD-DEFENSE WORKSHOP</span><br><span class="sub">Industry leading workshop for all Domain Admins, from a Domain Admin to another.</span></p></div>
     <img src="img/img01.jpg" width=100% style="opacity:0.2">
 </div>
     <div class="w3-container w3-white">
