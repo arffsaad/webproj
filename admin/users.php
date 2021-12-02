@@ -5,8 +5,6 @@ if (isset($_SESSION["admin"]) && $_SESSION["admin"] == false){
     header("location: ../index.php");
     exit;
 }
-$try = $_SESSION["activeuser"];
-echo "$try";
 include_once "../config.php";
 ?>
 
@@ -14,9 +12,26 @@ include_once "../config.php";
 <html>
 <head>
 <title>Admin Panel - AD-DEFENSE</title>
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
+        <div class="w3-bar w3-black" ><a href="../index.php" class="w3-bar-item w3-button">Home</a>
+            <a href="../index.php#about" class="w3-bar-item w3-button">About</a>
+            <a href="../deauth.php" class="w3-bar-item w3-button w3-right">Logout</a>
+            <a href="../dashboard.php" class="w3-bar-item w3-button w3-right">Dashboard</a>
+            <div class='w3-dropdown-hover w3-right'>
+        <button class='w3-button'><b>Admin Panel</b></button>
+        <div class='w3-dropdown-content w3-bar-block w3-card-4'>
+        <a href='admin/users.php' class='w3-bar-item w3-button'>Manage Users</a>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
     <table border="1">
         <tr>
             <th>ID</th><th>Username</th><th>Password Hash</th><th>Admin?</th>

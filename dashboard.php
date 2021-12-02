@@ -42,7 +42,7 @@ mysqli_close($db);
                 width: 60%;
                 height: 800px;
                 display: inline-block;
-                top: 120px;
+                top: 150px;
             }
             .back{
                 height: 1100px;
@@ -51,10 +51,11 @@ mysqli_close($db);
                 top:10px;
             }
             .update{
-                bottom:-350px
+                bottom:-70px
             }
             #warn{
                 color:red;
+                z-index: 10000;
             }
         </style> 
         <script type="text/javascript">
@@ -64,8 +65,8 @@ mysqli_close($db);
 </script>   
     </head>
     <body>
-        <div class="w3-top w3-bar w3-black" ><a href="index.php" class="w3-bar-item w3-button">Home</a>
-        <a href="about.php" class="w3-bar-item w3-button">About</a>
+        <div class="w3-bar w3-black" ><a href="index.php" class="w3-bar-item w3-button">Home</a>
+        <a href="index.php#about" class="w3-bar-item w3-button">About</a>
         <a href="deauth.php" class="w3-bar-item w3-button w3-right">Logout</a>
         <a href="dashboard.php" class="w3-bar-item w3-button w3-right">Dashboard</a>
         <?php
@@ -80,25 +81,24 @@ mysqli_close($db);
         ?>
         </div>
         <div class="w3-container back">
-            <br><br>
             <h2 align="center">Welcome
             <?php
             echo $_SESSION["activeuser"];
             ?>
              to your Dashboard!</h2>
+             <?php
+             $updated = true;
+             for ($x = 0; $x < 9; $x++){
+                 if($dat[$x] == NULL){
+                     $updated = false;
+                 }
+             }
+             if ($updated == false){
+                 echo "<h4 id='warn' class='wrn w3-red' align='center'>PLEASE UPDATE YOUR PROFILE!</h4>";
+             }
+             
+             ?>
             </div>
-            <script type="text/javascript">
-                if (document.getElementById('dash1').value == 0 || document.getElementById('dash2').value == 0 || 
-                document.getElementById('dash3').value == 0 || document.getElementById('dash4').value == 0 || 
-                document.getElementById('dash5').value == 0 || document.getElementById('dash6').value == 0 || 
-                document.getElementById('dash7').value == 0 || document.getElementById('dash8').value == 0){
-                    document.getElementById('warn').hidden = false;
-                }
-                else{
-                    document.getElementById('warn').hidden = true;
-                }
-            </script>
-            <h4 id="warn" class="wrn">PLEASE UPDATE YOUR PROFILE!</h4>
         <div class="w3-container w3-display-container w3-teal scnd w3-display-topmiddle">
             <div class="labels w3-display-topleft">
                 <br><br>

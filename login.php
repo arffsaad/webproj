@@ -28,7 +28,7 @@ include_once "config.php";
 <body>
 <div class="w3-top w3-bar w3-black">
     <a href="index.php" class="w3-bar-item w3-button">Home</a>
-<a href="about.php" class="w3-bar-item w3-button w3-left-align">About</a>
+<a href="index.php#about" class="w3-bar-item w3-button w3-left-align">About</a>
 <a href="register.php" class="w3-bar-item w3-button w3-left-align">Register</a>
 <a href="login.php" class="w3-bar-item w3-button w3-left-align">Login</a>
 </div>

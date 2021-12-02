@@ -33,36 +33,43 @@ else{
 .sub{
     font-family: 'Roboto', sans-serif;
 }
+.large{
+    width:100%;
+    height: 400px;
+}
     </style>
 </head>
 
 <body>
-<div class="w3-top w3-bar w3-black" ><a href="index.php" class="w3-bar-item w3-button">Home</a>
-<a href="about.php" class="w3-bar-item w3-button">About</a>
-<?php
-if ($logged == "NO"){
-    echo '<a href="register.php" class="w3-bar-item w3-button">Register</a>';
-    echo '<a href="login.php" class="w3-bar-item w3-button">Login</a>';
-}
-if($logged == "YES"){
-    echo '<a href="deauth.php" class="w3-bar-item w3-button w3-right">Logout</a>';
-    echo '<a href="dashboard.php" class="w3-bar-item w3-button w3-right">Dashboard</a>';
-}
-if(isset($_SESSION["admin"]) && $_SESSION["admin"] == true){
-    echo '<div class="w3-dropdown-hover w3-right">
-    <button class="w3-button"><b>Admin Panel</b></button>
-    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-      <a href="admin/users.php" class="w3-bar-item w3-button">Manage Users</a>
-      </div>';
-}
-?>
-</div>
+    <div class="w3-bar w3-black">
+    <a href="index.php" class="w3-bar-item w3-button">Home</a>
+    <a href="#about" class="w3-bar-item w3-button">About</a>
+    <?php
+    if ($logged == "NO"){
+        echo '<a href="register.php" class="w3-bar-item w3-button">Register</a>';
+        echo '<a href="login.php" class="w3-bar-item w3-button">Login</a>';
+    }
+    if($logged == "YES"){
+        echo '<a href="deauth.php" class="w3-bar-item w3-button w3-right">Logout</a>';
+        echo '<a href="dashboard.php" class="w3-bar-item w3-button w3-right">Dashboard</a>';
+    }
+    if(isset($_SESSION["admin"]) && $_SESSION["admin"] == true){
+        echo "<div class='w3-dropdown-hover w3-right'>
+        <button class='w3-button'><b>Admin Panel</b></button>
+        <div class='w3-dropdown-content w3-bar-block w3-card-4'>
+        <a href='admin/users.php' class='w3-bar-item w3-button'>Manage Users</a>
+        </div>
+        </div>";
+    }
+    ?>
+    </div>
 <div class="w3-container">
     <div class="w3-container w3-display-middle ontop"><p><span class="header">AD-DEFENSE WORKSHOP</span><br><span class="sub">Industry leading workshop for all Domain Admins, from a Domain Admin to another.</span></p></div>
     <img src="img/img01.jpg" width=100% style="opacity:0.2">
 </div>
+<div class="w3-container w3-white large"></div>
     <div class="w3-container w3-white">
-<p align="justify">Welcome to our annual AD Defense Workshop! The purpose of our workshop is to equip System Administrators with the basics and even dive into some 
+<p align="justify" id="about">Welcome to our annual AD Defense Workshop! The purpose of our workshop is to equip System Administrators with the basics and even dive into some 
         advanced defense techniques to safeguard your organization's AD environment. We will also share the industry standard for maintaining the environment, 
     as well as the do's and dont's of becoming a Domain Admin.</p></div>
 
