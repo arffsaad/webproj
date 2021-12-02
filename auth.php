@@ -29,7 +29,7 @@ else{
         $_SESSION["activeuser"] = $usr;
         $_SESSION["admin"] = $adm;
         $_SESSION["userid"] = $id;
-        header("location: index.php");
+        header("location: dashboard.php");
         exit;
     }
     else{
