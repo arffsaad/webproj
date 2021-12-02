@@ -20,6 +20,7 @@ if(mysqli_num_rows($result) == 0){
 }
 else{
     $row = mysqli_fetch_array($result);
+    $id = $row['id'];
     $user = $row['username'];
     $pass = $row['passwd'];
     $adm = $row['admin'];
@@ -27,6 +28,7 @@ else{
         $_SESSION["loggedin"] = true;
         $_SESSION["activeuser"] = $usr;
         $_SESSION["admin"] = $adm;
+        $_SESSION["userid"] = $id;
         header("location: index.php");
         exit;
     }
