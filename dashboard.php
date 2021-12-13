@@ -57,6 +57,9 @@ mysqli_close($db);
                 color:red;
                 z-index: 10000;
             }
+            #update{
+                bottom:-425px
+            }
         </style> 
         <script type="text/javascript">
         function enableUpdate() {
@@ -94,9 +97,13 @@ mysqli_close($db);
                  }
              }
              if ($updated == false){
-                 echo "<h4 id='warn' class='wrn w3-red' align='center'>PLEASE UPDATE YOUR PROFILE!</h4>";
+                if (!isset($_SESSION['updated'])){
+                 echo "<h4 id='warn' class='wrn w3-red' align='center'>PLEASE UPDATE YOUR PROFILE!</h4>";}
              }
-             
+             if(isset($_SESSION["updated"])){
+                echo "<h4 id='warn' class='wrn w3-teal' align='center'>Profile Updated!</h4>";
+                unset($_SESSION["updated"]);
+             }
              ?>
             </div>
         <div class="w3-container w3-display-container w3-teal scnd w3-display-topmiddle">

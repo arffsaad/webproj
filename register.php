@@ -41,8 +41,10 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){
         Username<br><input type="text" name="usr" required><br>
         Password<br><input type="password" name="pwd" id="pwd" onchange='check_pass();' required/><br>
         Confirm Password<br><input type="password" name="pwd2nd" id= "pwd2nd" onchange='check_pass();' required/><br>
-        <h4 style="color:#ff0000" id="unmatch" hidden>Passwords do not match!</h4>
-        <h4 id="match" hidden>Passwords Match.</h4>
+        <h5 style="color:#ff0000" id="unmatch" hidden>Passwords do not match!</h5>
+        <h5 id="match" hidden>Passwords Match.</h5>
+        Phone Number<br><input type="text" name="phone" required><br>
+        Email<br><input type="text" name="email" required><br>
         <button type="submit" class="w3-button w3-teal" id="submit">Register</button><br>
 </form>
 <?php
