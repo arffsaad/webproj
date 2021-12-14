@@ -37,6 +37,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true){
 <div class="w3-container">
 <img src="img/img02.jpg" width=100%>
 <div class="w3-container w3-display-middle w3-white">
+    <h2>REGISTER TO ATTEND OUR EVENT!</h2><br><br>
 <form method="post" action="reg.php">
         Username<br><input type="text" name="usr" required><br>
         Password<br><input type="password" name="pwd" id="pwd" onchange='check_pass();' required/><br>
