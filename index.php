@@ -46,14 +46,14 @@ else{
 }
 .desc{
     width:300px;
-    top:400px
+    top:125%
 }
 .pad{
     width:100%;
     height:320px
 }
 .c{
-    top:419px
+    top:130%
 }
     </style>
 </head>
@@ -120,7 +120,13 @@ else{
     </div>
     </div>
     <div class="w3-container w3-white pad"></div>
-    <div class="w3-display-container w3-black pad"></div>
+    <div class="w3-display-container w3-black pad">
+        <div class="w3-container w3-display-middle">
+        <button class="w3-button w3-teal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Join Now!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        <span style="color:black">THIS IS DUMMY TEXT  </span>
+        <button class="w3-button w3-teal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        </div>
+    </div>
     </div>
 
     

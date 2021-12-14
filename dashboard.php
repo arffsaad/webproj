@@ -58,7 +58,7 @@ mysqli_close($db);
                 z-index: 10000;
             }
             #update{
-                bottom:-425px
+                bottom:-10%
             }
         </style> 
         <script type="text/javascript">
